@@ -1,6 +1,5 @@
 public class Producto {
-
-    private  int id;
+    private int id;
     private String nombre;
     private double precio;
 
@@ -36,7 +35,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Productos{" +
+        return "Producto{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", precio=" + precio +
