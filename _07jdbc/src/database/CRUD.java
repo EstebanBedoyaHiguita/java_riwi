@@ -11,7 +11,7 @@ public interface CRUD {
 
     public boolean delete (Object object);
 
-    public List<Object> finAll();
+    public List<Object> findAll();
 
     public Object findById(int id);
 

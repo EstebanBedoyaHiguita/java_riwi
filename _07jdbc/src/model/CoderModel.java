@@ -5,12 +5,10 @@ import database.ComfigDB;
 import entity.Coder;
 
 import javax.swing.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class CoderModel implements CRUD {
     @Override
@@ -57,18 +55,79 @@ public class CoderModel implements CRUD {
 
     @Override
     public boolean update(Object object) {
+            Connection objConnection = ComfigDB.openConnection();
+
+            Coder objCoder = (Coder) object;
+
+            boolean isEdit = false;
+
+            try{
+                String sql = "UPDATE coder SET name = ?, age = ?,clan = ? where id = ?;";
+
+                PreparedStatement objPrepare = objConnection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
+
+                objPrepare.setString(1,objCoder.getName());
+                objPrepare.setInt(2,objCoder.getAge());
+                objPrepare.setString(3,objCoder.getClan());
+                objPrepare.setInt(4,objCoder.getId());
+
+                int totalAffectedRows = objPrepare.executeUpdate();
 
 
-        return false;
+                if (totalAffectedRows > 0){
+                    isEdit = true;
+                    JOptionPane.showMessageDialog(null,"The edit was succesfull");
+
+                }
+
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(null,e.getMessage());
+
+            }
+            ComfigDB.closeConnection();
+
+
+        return isEdit;
     }
 
     @Override
     public boolean delete(Object object) {
-        return false;
+        //1. Convertir el objeto a la entidad que necesito
+        Coder objCoder = (Coder) object;
+        //2.Variable boolean para medir el estado de la eliminacion
+        boolean isDelete = false;
+        //3. Abrir la conexion
+
+        Connection objConnection = ComfigDB.openConnection();
+
+        try{
+            //4.Escribir la sentencia sql
+            String sql = "DELETE FROM coder WHERE id = ?";
+            //5. Preparamos el estatement
+            PreparedStatement objPrepare = objConnection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
+            //6. Asignamos el valor al ?
+            objPrepare.setInt(1,objCoder.getId());
+            //7. ExecuteUpdate devuelve la cantidad de filas afectadas por la sentencia sql
+            int totalAffectedRows = objPrepare.executeUpdate();
+
+            if(totalAffectedRows > 0){
+                isDelete = true;
+                JOptionPane.showMessageDialog(null,"The delete was succesfull");
+            }
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null,e.getMessage());
+
+        }
+        //8.Cerramos la conexion
+        ComfigDB.closeConnection();
+
+
+        return isDelete;
     }
 
     @Override
-    public List<Object> finAll() {
+    public List<Object> findAll() {
         //1.Abrir la conexion
         Connection objConnection = ComfigDB.openConnection();
         //2.Inicializar la lista donde se guardaran los registros que devuelve la base de datos
@@ -159,7 +218,7 @@ public class CoderModel implements CRUD {
             PreparedStatement objPrepareStatement = objConnection.prepareStatement(sql);
 
             ResultSet objResult = (ResultSet) objPrepareStatement.executeQuery();
-            System.out.println(objResult.next());
+
 
             while (objResult.next()) {
                 Coder objCoder = new Coder();
