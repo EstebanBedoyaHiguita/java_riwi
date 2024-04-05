@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="java_riwi">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Libreria.zip!/" />
+      <root url="jar://$PROJECT_DIR$/_05_inventario_poo.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CalculadoraApp/CalculadoraApp.iml" filepath="$PROJECT_DIR$/CalculadoraApp/CalculadoraApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CatalogoPeliculasApp/CatalogoPeliculasApp.iml" filepath="$PROJECT_DIR$/CatalogoPeliculasApp/CatalogoPeliculasApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Libreria/Libreria.iml" filepath="$PROJECT_DIR$/Libreria/Libreria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ListadPersonasApp/ListadPersonasApp.iml" filepath="$PROJECT_DIR$/ListadPersonasApp/ListadPersonasApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Main/Main.iml" filepath="$PROJECT_DIR$/Main/Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO/POO.iml" filepath="$PROJECT_DIR$/POO/POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RegistoEmpleados/RegistoEmpleados.iml" filepath="$PROJECT_DIR$/RegistoEmpleados/RegistoEmpleados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VentaCompoutadorasApp/VentaCompoutadorasApp.iml" filepath="$PROJECT_DIR$/VentaCompoutadorasApp/VentaCompoutadorasApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_02_bucles/_02_bucles.iml" filepath="$PROJECT_DIR$/_02_bucles/_02_bucles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_03_array_listas/_03_array_listas.iml" filepath="$PROJECT_DIR$/_03_array_listas/_03_array_listas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_04_POO/_04_POO.iml" filepath="$PROJECT_DIR$/_04_POO/_04_POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_05_inventario_poo/_05_inventario_poo.iml" filepath="$PROJECT_DIR$/_05_inventario_poo/_05_inventario_poo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_06_Gestion_Cursos/_06_Gestion_Cursos.iml" filepath="$PROJECT_DIR$/_06_Gestion_Cursos/_06_Gestion_Cursos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_07jdbc/_07jdbc.iml" filepath="$PROJECT_DIR$/_07jdbc/_07jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java_riwi.iml" filepath="$PROJECT_DIR$/.idea/java_riwi.iml" />
+    </modules>
+  </component>
+</project>

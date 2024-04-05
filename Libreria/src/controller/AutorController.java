@@ -75,28 +75,7 @@ public class AutorController {
 
         this.objAutorModel.delete(autorSelected);
 
-//        objAutor = (Autor) this.objAutorModel.delete(objAutor);
-//        String listAutores = "LISTA AUTORES\n";
 //
-//        int confirm=1;
-//
-//        for(Object obj:this.objAutorModel.findAll()){
-//            Autor objAutor = (Autor)  obj;
-//            listAutores += objAutor.toString()+ "\n";
-//        }
-//
-//       int idDelete = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Id del autor que desea eliminar"));
-//
-//        Autor objAutor = (Autor)  this.objAutorModel.findById(idDelete);
-//
-//        if (objAutor == null){
-//            JOptionPane.showMessageDialog(null,"Id no encontrado");
-//
-//        }else{
-//            confirm = JOptionPane.showConfirmDialog(null,"Esta seguro de eliminar este autor?");
-//            if (confirm == 0){
-//                this.objAutorModel.delete(objAutor);
-//            }
 
     }
 
